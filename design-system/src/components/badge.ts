@@ -13,7 +13,7 @@ import {
 import { padding2, padding3 } from "../tokens";
 import { action100, action700 } from "../tokens/colours";
 
-class Badge extends FoundationElement {
+export class Badge extends FoundationElement {
   @attr({ attribute: "size" })
   public size: "standard" | "large" = "standard";
 
@@ -22,8 +22,8 @@ class Badge extends FoundationElement {
 }
 
 export const template: FoundationElementTemplate<ViewTemplate<Badge>> = (
-  context,
-  definition
+  _context,
+  _definition
 ) => html`
   <template>
     <div class="control" part="control">
@@ -33,8 +33,8 @@ export const template: FoundationElementTemplate<ViewTemplate<Badge>> = (
 `;
 
 export const styles: FoundationElementTemplate<ElementStyles> = (
-  context,
-  definition
+  _context,
+  _definition
 ) => css`
   ${display("inline-block")} :host {
     box-sizing: border-box;
