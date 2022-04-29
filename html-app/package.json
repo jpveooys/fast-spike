@@ -16,6 +16,7 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
+    "design-system": "file:../design-system"
   },
   "devDependencies": {
     "prettier": "^2.6.2",

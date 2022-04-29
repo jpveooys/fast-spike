@@ -1,11 +1,14 @@
-import { MODBadge } from "design-system-react";
+import { MODBadge, MODTextInput } from "design-system-react";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const [value, setValue] = useState("");
+  const inputRef = useRef<Element>(null);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,6 +28,19 @@ function App() {
               This is a rounded badge
             </MODBadge>
           </div>
+          <br />
+          <div>
+            <MODTextInput
+              ref={inputRef}
+              initialValue="Hello"
+              label="A label"
+              onInput={(event) => {
+                setValue(event.target.value);
+              }}
+            />
+          </div>
+          <br />
+          <div>Current value: {value}</div>
         </div>
       </header>
     </div>

@@ -15,3 +15,11 @@
     This is a rounded badge
   </mod-badge>
 </div>
+<br />
+<div>
+  <h2>{{title}}</h2>
+  <fast-text-field [(ngModel)]='exampleTextField' name='exampleTextField' ngDefaultControl placeholder="Enter Some Text"></fast-text-field>
+  <div>Input value: {{exampleTextField}}</div>
+    <mod-text-input [(ngModel)]='inputValue' label='My text input' name="my-input" ngDefaultControl></mod-text-input>
+  <div>Input value: {{inputValue}}</div>
+</div>
